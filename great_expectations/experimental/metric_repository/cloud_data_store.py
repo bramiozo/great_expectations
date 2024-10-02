@@ -98,7 +98,7 @@ class CloudDataStore(DataStore[StorableTypes]):
         config = self._context.ge_cloud_config
         return urllib.parse.urljoin(
             config.base_url,
-            f"organizations/{config.organization_id}{self._map_to_url(value)}",
+            f"api/v1/organizations/{config.organization_id}{self._map_to_url(value)}",
         )
 
     @override
